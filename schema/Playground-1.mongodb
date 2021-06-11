@@ -1,0 +1,2283 @@
+// MongoDB Playground
+// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
+// Make sure you are connected to enable completions and to be able to run a playground.
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// Select the database to use.
+use('TriolMarket');
+
+// The drop() command destroys all data from a collection.
+// Make sure you run it against the correct database and collection.
+db.categories.drop();
+
+// Insert a few documents into the sales collection.
+db.categories.insertMany([
+{
+"_id": 200,
+"parentId": 302,
+"name": "Вентиляторы",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 217,
+"parentId": 290,
+"name": "Обогреватели",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 291,
+"parentId": 290,
+"name": "Коврики",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 292,
+"parentId": 290,
+"name": "Кабели",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 293,
+"parentId": 290,
+"name": "Камни",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 294,
+"parentId": 289,
+"name": "Бонсаи и пещеры",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 295,
+"parentId": 289,
+"name": "Коврики",
+"childrenCount": 0,
+"productCount": 16
+},
+{
+"_id": 296,
+"parentId": 289,
+"name": "Кусты и кладофоры",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 297,
+"parentId": 289,
+"name": "Растения длинностебельные",
+"childrenCount": 0,
+"productCount": 133
+},
+{
+"_id": 298,
+"parentId": 289,
+"name": "Растения переднего плана",
+"childrenCount": 0,
+"productCount": 31
+},
+{
+"_id": 299,
+"parentId": 289,
+"name": "Растения с распылителем",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 300,
+"parentId": 289,
+"name": "Растения светящиеся",
+"childrenCount": 0,
+"productCount": 28
+},
+{
+"_id": 301,
+"parentId": 289,
+"name": "Растения шелковые",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 282,
+"parentId": 281,
+"name": "Переноски",
+"childrenCount": 0,
+"productCount": 47
+},
+{
+"_id": 283,
+"parentId": 281,
+"name": "Сумки, рюкзаки",
+"childrenCount": 0,
+"productCount": 74
+},
+{
+"_id": 273,
+"parentId": 272,
+"name": "Когтерезы",
+"childrenCount": 0,
+"productCount": 19
+},
+{
+"_id": 274,
+"parentId": 272,
+"name": "Пуходерки",
+"childrenCount": 0,
+"productCount": 35
+},
+{
+"_id": 275,
+"parentId": 272,
+"name": "Колтунорезы",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 276,
+"parentId": 272,
+"name": "Расчески",
+"childrenCount": 0,
+"productCount": 49
+},
+{
+"_id": 277,
+"parentId": 272,
+"name": "Щетки",
+"childrenCount": 0,
+"productCount": 26
+},
+{
+"_id": 263,
+"parentId": 262,
+"name": "Намордники",
+"childrenCount": 0,
+"productCount": 61
+},
+{
+"_id": 264,
+"parentId": 262,
+"name": "Ошейники",
+"childrenCount": 0,
+"productCount": 306
+},
+{
+"_id": 265,
+"parentId": 262,
+"name": "Поводки",
+"childrenCount": 0,
+"productCount": 97
+},
+{
+"_id": 266,
+"parentId": 262,
+"name": "Комплекты",
+"childrenCount": 0,
+"productCount": 93
+},
+{
+"_id": 267,
+"parentId": 262,
+"name": "Поводки-рулетки",
+"childrenCount": 0,
+"productCount": 70
+},
+{
+"_id": 268,
+"parentId": 262,
+"name": "Шлейки",
+"childrenCount": 0,
+"productCount": 54
+},
+{
+"_id": 269,
+"parentId": 262,
+"name": "Цепи",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 270,
+"parentId": 262,
+"name": "Карабины",
+"childrenCount": 0,
+"productCount": 45
+},
+{
+"_id": 271,
+"parentId": 262,
+"name": "Тросы, фиксаторы",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 259,
+"parentId": 258,
+"name": "Жевательные кости",
+"childrenCount": 0,
+"productCount": 99
+},
+{
+"_id": 260,
+"parentId": 258,
+"name": "Жевательные кости с маслом лосося",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 247,
+"parentId": 246,
+"name": "Миски NortMate",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 248,
+"parentId": 246,
+"name": "Миски бамбуковые NATURAL",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 249,
+"parentId": 246,
+"name": "Миски керамические",
+"childrenCount": 0,
+"productCount": 23
+},
+{
+"_id": 250,
+"parentId": 246,
+"name": "Миски металлические",
+"childrenCount": 0,
+"productCount": 117
+},
+{
+"_id": 251,
+"parentId": 246,
+"name": "Миски пластиковые",
+"childrenCount": 0,
+"productCount": 37
+},
+{
+"_id": 252,
+"parentId": 246,
+"name": "Миски силиконовые складные",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 253,
+"parentId": 246,
+"name": "Миски на подставке",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 254,
+"parentId": 246,
+"name": "Стойки с мисками",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 234,
+"parentId": 233,
+"name": "Свистки",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 235,
+"parentId": 233,
+"name": "Адресники",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 236,
+"parentId": 233,
+"name": "Подвески, медальоны, брелоки",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 229,
+"parentId": 228,
+"name": "Коврики под миски",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 230,
+"parentId": 228,
+"name": "Кормушки и поилки ",
+"childrenCount": 0,
+"productCount": 18
+},
+{
+"_id": 231,
+"parentId": 228,
+"name": "Совки для корма",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 232,
+"parentId": 228,
+"name": "Сумки для лакомств",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 221,
+"parentId": 220,
+"name": "Лампы накаливания",
+"childrenCount": 0,
+"productCount": 50
+},
+{
+"_id": 222,
+"parentId": 220,
+"name": "Лампы ультрафиолетовые",
+"childrenCount": 0,
+"productCount": 32
+},
+{
+"_id": 223,
+"parentId": 220,
+"name": "Светильники",
+"childrenCount": 0,
+"productCount": 24
+},
+{
+"_id": 214,
+"parentId": 213,
+"name": "Термометры и гигрометры",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 215,
+"parentId": 213,
+"name": "Терморегуляторы",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 216,
+"parentId": 213,
+"name": "Увлажнители",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 208,
+"parentId": 207,
+"name": "Коряги и лианы",
+"childrenCount": 0,
+"productCount": 16
+},
+{
+"_id": 209,
+"parentId": 207,
+"name": "Растения",
+"childrenCount": 0,
+"productCount": 35
+},
+{
+"_id": 210,
+"parentId": 207,
+"name": "Плотики и мостики",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 211,
+"parentId": 207,
+"name": "Фоны",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 188,
+"parentId": 196,
+"name": "Фильтры аэрлифтные",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 197,
+"parentId": 196,
+"name": "Компрессоры",
+"childrenCount": 0,
+"productCount": 28
+},
+{
+"_id": 198,
+"parentId": 196,
+"name": "Кормушки автоматические",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 199,
+"parentId": 196,
+"name": "Нагреватели",
+"childrenCount": 0,
+"productCount": 33
+},
+{
+"_id": 201,
+"parentId": 196,
+"name": "Осветительное оборудование",
+"childrenCount": 0,
+"productCount": 117
+},
+{
+"_id": 202,
+"parentId": 196,
+"name": "Помпы",
+"childrenCount": 0,
+"productCount": 31
+},
+{
+"_id": 203,
+"parentId": 196,
+"name": "Фильтры внутренние",
+"childrenCount": 0,
+"productCount": 22
+},
+{
+"_id": 204,
+"parentId": 196,
+"name": "Фильтры внешние",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 205,
+"parentId": 196,
+"name": "Фильтры навесные",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 206,
+"parentId": 196,
+"name": "Расходные материалы",
+"childrenCount": 0,
+"productCount": 191
+},
+{
+"_id": 321,
+"parentId": 196,
+"name": "Стерилизаторы",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 191,
+"parentId": 190,
+"name": "Смеси натуральные",
+"childrenCount": 0,
+"productCount": 77
+},
+{
+"_id": 192,
+"parentId": 190,
+"name": "Галька натуральная",
+"childrenCount": 0,
+"productCount": 21
+},
+{
+"_id": 193,
+"parentId": 190,
+"name": "Грунт декоративный",
+"childrenCount": 0,
+"productCount": 19
+},
+{
+"_id": 288,
+"parentId": 190,
+"name": "Камни для оформления",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 180,
+"parentId": 179,
+"name": "Отсадники, переноски",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 181,
+"parentId": 179,
+"name": "Очистители грунта",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 182,
+"parentId": 179,
+"name": "Распылители",
+"childrenCount": 0,
+"productCount": 49
+},
+{
+"_id": 183,
+"parentId": 179,
+"name": "Сачки",
+"childrenCount": 0,
+"productCount": 19
+},
+{
+"_id": 184,
+"parentId": 179,
+"name": "Скребки",
+"childrenCount": 0,
+"productCount": 16
+},
+{
+"_id": 185,
+"parentId": 179,
+"name": "Термометры",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 186,
+"parentId": 179,
+"name": "Фитинг",
+"childrenCount": 0,
+"productCount": 12
+},
+{
+"_id": 187,
+"parentId": 179,
+"name": "Шланги",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 189,
+"parentId": 179,
+"name": "Щипцы",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 64,
+"parentId": 175,
+"name": "Серия \"Кладоискатели\"",
+"childrenCount": 0,
+"productCount": 56
+},
+{
+"_id": 72,
+"parentId": 175,
+"name": "Серия \"Замки и мосты\"",
+"childrenCount": 0,
+"productCount": 24
+},
+{
+"_id": 76,
+"parentId": 175,
+"name": "Серия \"Камни и коряги\"",
+"childrenCount": 0,
+"productCount": 61
+},
+{
+"_id": 176,
+"parentId": 175,
+"name": "Серия \"Аэро\"",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 177,
+"parentId": 175,
+"name": "Серия \"Антика\"",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 311,
+"parentId": 175,
+"name": "Серия \"Притяжение\"",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 307,
+"parentId": 175,
+"name": "Серия \"Подводные приключения\"",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 284,
+"parentId": 175,
+"name": "Серия \"Океан\"",
+"childrenCount": 0,
+"productCount": 42
+},
+{
+"_id": 285,
+"parentId": 175,
+"name": "Серия \"Профи\"",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 286,
+"parentId": 175,
+"name": "Серия \"Черепа\"",
+"childrenCount": 0,
+"productCount": 17
+},
+{
+"_id": 287,
+"parentId": 175,
+"name": "Дисней",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 169,
+"parentId": 168,
+"name": "Корма",
+"childrenCount": 0,
+"productCount": 25
+},
+{
+"_id": 170,
+"parentId": 168,
+"name": "Лакомства",
+"childrenCount": 0,
+"productCount": 17
+},
+{
+"_id": 163,
+"parentId": 162,
+"name": "Клетки в индивидуальной упаковке",
+"childrenCount": 0,
+"productCount": 20
+},
+{
+"_id": 166,
+"parentId": 162,
+"name": "Клетки с переходами",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 167,
+"parentId": 162,
+"name": "Клетки",
+"childrenCount": 0,
+"productCount": 47
+},
+{
+"_id": 156,
+"parentId": 155,
+"name": "Поилки",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 157,
+"parentId": 155,
+"name": "Кормушки",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 158,
+"parentId": 155,
+"name": "Миски",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 153,
+"parentId": 152,
+"name": "Корма",
+"childrenCount": 0,
+"productCount": 34
+},
+{
+"_id": 154,
+"parentId": 152,
+"name": "Лакомства",
+"childrenCount": 0,
+"productCount": 14
+},
+{
+"_id": 65,
+"parentId": 145,
+"name": "Развивающие игрушки",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 146,
+"parentId": 145,
+"name": "Зеркала",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 147,
+"parentId": 145,
+"name": "Подвески",
+"childrenCount": 0,
+"productCount": 58
+},
+{
+"_id": 148,
+"parentId": 145,
+"name": "Качели",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 149,
+"parentId": 145,
+"name": "Веревочные игрушки",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 150,
+"parentId": 145,
+"name": "Лесенки, жердочки",
+"childrenCount": 0,
+"productCount": 18
+},
+{
+"_id": 319,
+"parentId": 145,
+"name": "NATURAL",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 143,
+"parentId": 142,
+"name": "Ванночки",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 144,
+"parentId": 142,
+"name": "Купалки",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 138,
+"parentId": 137,
+"name": "Поилки",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 139,
+"parentId": 137,
+"name": "Кормушки",
+"childrenCount": 0,
+"productCount": 12
+},
+{
+"_id": 140,
+"parentId": 137,
+"name": "Миски",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 66,
+"parentId": 134,
+"name": "Здоровое питание",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 135,
+"parentId": 134,
+"name": "Иммунная защита",
+"childrenCount": 0,
+"productCount": 16
+},
+{
+"_id": 136,
+"parentId": 134,
+"name": "Блестящая шерсть",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 131,
+"parentId": 130,
+"name": "Силикагелевый",
+"childrenCount": 0,
+"productCount": 18
+},
+{
+"_id": 132,
+"parentId": 130,
+"name": "Минеральный",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 133,
+"parentId": 130,
+"name": "Растительный",
+"childrenCount": 0,
+"productCount": 21
+},
+{
+"_id": 126,
+"parentId": 125,
+"name": "Когтеточки из гофрокартона",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 127,
+"parentId": 125,
+"name": "Когтеточки из ковролина, джута и пеньки",
+"childrenCount": 0,
+"productCount": 45
+},
+{
+"_id": 128,
+"parentId": 125,
+"name": "Когтеточки из сизаля",
+"childrenCount": 0,
+"productCount": 43
+},
+{
+"_id": 129,
+"parentId": 125,
+"name": "Когтеточки NATURAL",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 103,
+"parentId": 116,
+"name": "Игрушки развивающие",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 117,
+"parentId": 116,
+"name": "Игрушки мягкие",
+"childrenCount": 0,
+"productCount": 58
+},
+{
+"_id": 118,
+"parentId": 116,
+"name": "Игрушки в банках и тубах",
+"childrenCount": 0,
+"productCount": 36
+},
+{
+"_id": 119,
+"parentId": 116,
+"name": "Игрушки в наборах",
+"childrenCount": 0,
+"productCount": 31
+},
+{
+"_id": 120,
+"parentId": 116,
+"name": "Игрушки для кошек NATURAL",
+"childrenCount": 0,
+"productCount": 40
+},
+{
+"_id": 121,
+"parentId": 116,
+"name": "Игрушки зефирные",
+"childrenCount": 0,
+"productCount": 38
+},
+{
+"_id": 122,
+"parentId": 116,
+"name": "Игрушки из сизаля",
+"childrenCount": 0,
+"productCount": 21
+},
+{
+"_id": 123,
+"parentId": 116,
+"name": "Мыши",
+"childrenCount": 0,
+"productCount": 50
+},
+{
+"_id": 124,
+"parentId": 116,
+"name": "Удочки-дразнилки",
+"childrenCount": 0,
+"productCount": 90
+},
+{
+"_id": 303,
+"parentId": 116,
+"name": "Интерактивные игрушки",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 305,
+"parentId": 116,
+"name": "Игрушки из кошачьей мяты",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 161,
+"parentId": 108,
+"name": "Домики",
+"childrenCount": 0,
+"productCount": 45
+},
+{
+"_id": 173,
+"parentId": 108,
+"name": "Лежанки",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 320,
+"parentId": 108,
+"name": "NATURAL",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 106,
+"parentId": 104,
+"name": "Переноски",
+"childrenCount": 0,
+"productCount": 67
+},
+{
+"_id": 107,
+"parentId": 104,
+"name": "Сумки, рюкзаки",
+"childrenCount": 0,
+"productCount": 71
+},
+{
+"_id": 164,
+"parentId": 102,
+"name": "Прогулочные шары",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 165,
+"parentId": 102,
+"name": "Беговые колеса",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 94,
+"parentId": 93,
+"name": "Миски NortMate",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 95,
+"parentId": 93,
+"name": "Миски бамбуковые NATURAL",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 96,
+"parentId": 93,
+"name": "Миски керамические",
+"childrenCount": 0,
+"productCount": 21
+},
+{
+"_id": 97,
+"parentId": 93,
+"name": "Миски металлические",
+"childrenCount": 0,
+"productCount": 100
+},
+{
+"_id": 98,
+"parentId": 93,
+"name": "Миски пластиковые",
+"childrenCount": 0,
+"productCount": 33
+},
+{
+"_id": 99,
+"parentId": 93,
+"name": "Миски силиконовые складные",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 100,
+"parentId": 93,
+"name": "Миски на подставке",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 101,
+"parentId": 93,
+"name": "Стойки с мисками",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 62,
+"parentId": 89,
+"name": "Гамаки",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 63,
+"parentId": 89,
+"name": "Домики",
+"childrenCount": 0,
+"productCount": 57
+},
+{
+"_id": 90,
+"parentId": 89,
+"name": "Пледы",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 91,
+"parentId": 89,
+"name": "Лежаки и матрасы",
+"childrenCount": 0,
+"productCount": 17
+},
+{
+"_id": 92,
+"parentId": 89,
+"name": "Лежанки и диваны",
+"childrenCount": 0,
+"productCount": 167
+},
+{
+"_id": 87,
+"parentId": 86,
+"name": "Клетки в индивидуальной упаковке",
+"childrenCount": 0,
+"productCount": 20
+},
+{
+"_id": 151,
+"parentId": 86,
+"name": "Клетки",
+"childrenCount": 0,
+"productCount": 78
+},
+{
+"_id": 78,
+"parentId": 79,
+"name": "Когтерезы",
+"childrenCount": 0,
+"productCount": 19
+},
+{
+"_id": 80,
+"parentId": 79,
+"name": "Пуходерки",
+"childrenCount": 0,
+"productCount": 35
+},
+{
+"_id": 81,
+"parentId": 79,
+"name": "Расчески",
+"childrenCount": 0,
+"productCount": 49
+},
+{
+"_id": 82,
+"parentId": 79,
+"name": "Щетки",
+"childrenCount": 0,
+"productCount": 26
+},
+{
+"_id": 84,
+"parentId": 79,
+"name": "Колтунорезы",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 68,
+"parentId": 67,
+"name": "Зубные щетки",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 69,
+"parentId": 67,
+"name": "Ветеринарные препараты",
+"childrenCount": 0,
+"productCount": 0
+},
+{
+"_id": 70,
+"parentId": 67,
+"name": "Полотенца",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 71,
+"parentId": 67,
+"name": "Влажные салфетки",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 73,
+"parentId": 67,
+"name": "Пелёнки для туалета",
+"childrenCount": 0,
+"productCount": 23
+},
+{
+"_id": 74,
+"parentId": 67,
+"name": "Приспособление для удаления клещей",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 75,
+"parentId": 67,
+"name": "Защитные воротники",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 77,
+"parentId": 67,
+"name": "Средства для коррекции поведения",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 109,
+"parentId": 67,
+"name": "Шампуни, спреи",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 110,
+"parentId": 67,
+"name": "Репелентные средства",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 111,
+"parentId": 67,
+"name": "Туалеты",
+"childrenCount": 0,
+"productCount": 51
+},
+{
+"_id": 112,
+"parentId": 67,
+"name": "Коврики для туалета",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 113,
+"parentId": 67,
+"name": "Совки для туалета",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 316,
+"parentId": 67,
+"name": "Пакеты в лоток",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 59,
+"parentId": 58,
+"name": "Ошейники",
+"childrenCount": 0,
+"productCount": 16
+},
+{
+"_id": 60,
+"parentId": 58,
+"name": "Комплекты",
+"childrenCount": 0,
+"productCount": 20
+},
+{
+"_id": 61,
+"parentId": 58,
+"name": "Шлейки",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 54,
+"parentId": 53,
+"name": "Коврики под миски",
+"childrenCount": 0,
+"productCount": 19
+},
+{
+"_id": 55,
+"parentId": 53,
+"name": "Кормушки и поилки",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 56,
+"parentId": 53,
+"name": "Совки для корма",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 57,
+"parentId": 53,
+"name": "Сумки для лакомств",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 51,
+"parentId": 50,
+"name": "Подвески, медальоны, брелоки",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 52,
+"parentId": 50,
+"name": "Адресники",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 45,
+"parentId": 44,
+"name": "Блестящая шерсть",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 46,
+"parentId": 44,
+"name": "Здоровье зубов",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 47,
+"parentId": 44,
+"name": "Здоровое питание",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 48,
+"parentId": 44,
+"name": "Активная жизнь",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 49,
+"parentId": 44,
+"name": "Мясные лакомства для мини-собак",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 257,
+"parentId": 44,
+"name": "Иммунная защита",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 41,
+"parentId": 40,
+"name": "Будки",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 42,
+"parentId": 40,
+"name": "Вольеры",
+"childrenCount": 0,
+"productCount": 14
+},
+{
+"_id": 43,
+"parentId": 40,
+"name": "Тенты",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 37,
+"parentId": 36,
+"name": "Пледы",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 38,
+"parentId": 36,
+"name": "Гамаки",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 278,
+"parentId": 36,
+"name": "Лежанки и диваны",
+"childrenCount": 0,
+"productCount": 186
+},
+{
+"_id": 279,
+"parentId": 36,
+"name": "Лежаки и матрасы",
+"childrenCount": 0,
+"productCount": 17
+},
+{
+"_id": 280,
+"parentId": 36,
+"name": "Домики",
+"childrenCount": 0,
+"productCount": 52
+},
+{
+"_id": 312,
+"parentId": 27,
+"name": "BE TRENDY",
+"childrenCount": 0,
+"productCount": 24
+},
+{
+"_id": 28,
+"parentId": 27,
+"name": "Одежда зимняя",
+"childrenCount": 0,
+"productCount": 675
+},
+{
+"_id": 29,
+"parentId": 27,
+"name": "Одежда демисезонная",
+"childrenCount": 0,
+"productCount": 1344
+},
+{
+"_id": 32,
+"parentId": 27,
+"name": "Одежда летняя",
+"childrenCount": 0,
+"productCount": 311
+},
+{
+"_id": 33,
+"parentId": 27,
+"name": "Носки",
+"childrenCount": 0,
+"productCount": 50
+},
+{
+"_id": 34,
+"parentId": 27,
+"name": "Трусы",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 35,
+"parentId": 27,
+"name": "Обувь",
+"childrenCount": 0,
+"productCount": 240
+},
+{
+"_id": 14,
+"parentId": 13,
+"name": "Игрушки веревочные",
+"childrenCount": 0,
+"productCount": 63
+},
+{
+"_id": 15,
+"parentId": 13,
+"name": "Игрушки из винила",
+"childrenCount": 0,
+"productCount": 133
+},
+{
+"_id": 16,
+"parentId": 13,
+"name": "Игрушки из латекса",
+"childrenCount": 0,
+"productCount": 133
+},
+{
+"_id": 17,
+"parentId": 13,
+"name": "Игрушки из нейлона и неопрена",
+"childrenCount": 0,
+"productCount": 29
+},
+{
+"_id": 18,
+"parentId": 13,
+"name": "Игрушки из термопластичной резины",
+"childrenCount": 0,
+"productCount": 71
+},
+{
+"_id": 19,
+"parentId": 13,
+"name": "Игрушки мягкие",
+"childrenCount": 0,
+"productCount": 223
+},
+{
+"_id": 20,
+"parentId": 13,
+"name": "Игрушки DENTAL",
+"childrenCount": 0,
+"productCount": 17
+},
+{
+"_id": 21,
+"parentId": 13,
+"name": "Игрушки NATURAL",
+"childrenCount": 0,
+"productCount": 21
+},
+{
+"_id": 22,
+"parentId": 13,
+"name": "Игрушки AROMA",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 23,
+"parentId": 13,
+"name": "Игрушки STRONG",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 24,
+"parentId": 13,
+"name": "Игрушки NIGHT CITY",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 25,
+"parentId": 13,
+"name": "Игрушки MINI DOGS",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 26,
+"parentId": 13,
+"name": "Игрушки PUPPY",
+"childrenCount": 0,
+"productCount": 27
+},
+{
+"_id": 308,
+"parentId": 13,
+"name": "Игрушки из теннисной резины",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 309,
+"parentId": 13,
+"name": "Игрушки-лакомства TASTY TOY",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 313,
+"parentId": 13,
+"name": "Игрушки NEW YEAR",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 322,
+"parentId": 13,
+"name": "Игрушки из ЭВА",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 255,
+"parentId": 13,
+"name": "Игрушки из резины",
+"childrenCount": 0,
+"productCount": 128
+},
+{
+"_id": 256,
+"parentId": 13,
+"name": "Игрушки развивающие",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 317,
+"parentId": 13,
+"name": "Игрушки из эко-резины",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 9,
+"parentId": 8,
+"name": "Репелентные средства",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 10,
+"parentId": 8,
+"name": "Пакеты",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 11,
+"parentId": 8,
+"name": "Шампуни, спреи",
+"childrenCount": 0,
+"productCount": 19
+},
+{
+"_id": 12,
+"parentId": 8,
+"name": "Туалеты",
+"childrenCount": 0,
+"productCount": 22
+},
+{
+"_id": 304,
+"parentId": 8,
+"name": "Воск",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 237,
+"parentId": 8,
+"name": "Полотенца",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 238,
+"parentId": 8,
+"name": "Зубные щетки",
+"childrenCount": 0,
+"productCount": 2
+},
+{
+"_id": 239,
+"parentId": 8,
+"name": "Ветеринарные препараты",
+"childrenCount": 0,
+"productCount": 0
+},
+{
+"_id": 240,
+"parentId": 8,
+"name": "Влажные салфетки",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 241,
+"parentId": 8,
+"name": "Подгузники",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 242,
+"parentId": 8,
+"name": "Пеленки для туалета",
+"childrenCount": 0,
+"productCount": 23
+},
+{
+"_id": 243,
+"parentId": 8,
+"name": "Приспособление для удаления клещей",
+"childrenCount": 0,
+"productCount": 1
+},
+{
+"_id": 244,
+"parentId": 8,
+"name": "Защитные воротники",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 245,
+"parentId": 8,
+"name": "Средства для коррекции поведения",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 207,
+"parentId": 7,
+"name": "Декор",
+"childrenCount": 4,
+"productCount": 0
+},
+{
+"_id": 212,
+"parentId": 7,
+"name": "Инструментарий",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 213,
+"parentId": 7,
+"name": "Контроль и поддержание микроклимата",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 218,
+"parentId": 7,
+"name": "Укрытия",
+"childrenCount": 0,
+"productCount": 10
+},
+{
+"_id": 219,
+"parentId": 7,
+"name": "Кормушки",
+"childrenCount": 0,
+"productCount": 20
+},
+{
+"_id": 220,
+"parentId": 7,
+"name": "Осветительное оборудование",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 224,
+"parentId": 7,
+"name": "Субстрат",
+"childrenCount": 0,
+"productCount": 12
+},
+{
+"_id": 225,
+"parentId": 7,
+"name": "Террариумы",
+"childrenCount": 0,
+"productCount": 47
+},
+{
+"_id": 226,
+"parentId": 7,
+"name": "Переноски",
+"childrenCount": 0,
+"productCount": 5
+},
+{
+"_id": 227,
+"parentId": 7,
+"name": "Тумбы под террариумы",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 290,
+"parentId": 7,
+"name": "Обогрев террариума",
+"childrenCount": 4,
+"productCount": 0
+},
+{
+"_id": 31,
+"parentId": 6,
+"name": "Аквариумы",
+"childrenCount": 0,
+"productCount": 112
+},
+{
+"_id": 175,
+"parentId": 6,
+"name": "Гроты",
+"childrenCount": 11,
+"productCount": 0
+},
+{
+"_id": 178,
+"parentId": 6,
+"name": "Тумбы под аквариумы",
+"childrenCount": 0,
+"productCount": 31
+},
+{
+"_id": 179,
+"parentId": 6,
+"name": "Аксессуары",
+"childrenCount": 9,
+"productCount": 0
+},
+{
+"_id": 190,
+"parentId": 6,
+"name": "Грунт",
+"childrenCount": 4,
+"productCount": 0
+},
+{
+"_id": 194,
+"parentId": 6,
+"name": "Рыбки декоративные",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 195,
+"parentId": 6,
+"name": "Фоны",
+"childrenCount": 0,
+"productCount": 81
+},
+{
+"_id": 196,
+"parentId": 6,
+"name": "Оборудование",
+"childrenCount": 11,
+"productCount": 0
+},
+{
+"_id": 289,
+"parentId": 6,
+"name": "Растения искусственные",
+"childrenCount": 8,
+"productCount": 0
+},
+{
+"_id": 302,
+"parentId": 6,
+"name": "Оборудование для морских аквариумов",
+"childrenCount": 1,
+"productCount": 0
+},
+{
+"_id": 2,
+"parentId": 5,
+"name": "Амуниция",
+"childrenCount": 1,
+"productCount": 0
+},
+{
+"_id": 83,
+"parentId": 5,
+"name": "Игрушки",
+"childrenCount": 0,
+"productCount": 15
+},
+{
+"_id": 102,
+"parentId": 5,
+"name": "Шары и колеса",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 108,
+"parentId": 5,
+"name": "Лежанки, домики",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 155,
+"parentId": 5,
+"name": "Аксессуары для кормления",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 159,
+"parentId": 5,
+"name": "Гамаки и туннели",
+"childrenCount": 0,
+"productCount": 17
+},
+{
+"_id": 160,
+"parentId": 5,
+"name": "Гигиена",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 162,
+"parentId": 5,
+"name": "Клетки",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 168,
+"parentId": 5,
+"name": "Корма и лакомства",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 171,
+"parentId": 5,
+"name": "Переноски",
+"childrenCount": 0,
+"productCount": 11
+},
+{
+"_id": 174,
+"parentId": 5,
+"name": "Наполнитель, сено и опилки",
+"childrenCount": 0,
+"productCount": 8
+},
+{
+"_id": 86,
+"parentId": 4,
+"name": "Клетки",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 137,
+"parentId": 4,
+"name": "Аксессуары для кормления",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 141,
+"parentId": 4,
+"name": "Гнезда и домики NATURAL",
+"childrenCount": 0,
+"productCount": 20
+},
+{
+"_id": 142,
+"parentId": 4,
+"name": "Ванночки и купалки",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 145,
+"parentId": 4,
+"name": "Игрушки",
+"childrenCount": 7,
+"productCount": 0
+},
+{
+"_id": 152,
+"parentId": 4,
+"name": "Корма и лакомства",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 50,
+"parentId": 3,
+"name": "Аксессуары",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 53,
+"parentId": 3,
+"name": "Аксессуары для кормления",
+"childrenCount": 4,
+"productCount": 0
+},
+{
+"_id": 58,
+"parentId": 3,
+"name": "Амуниция",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 67,
+"parentId": 3,
+"name": "Гигиена",
+"childrenCount": 14,
+"productCount": 0
+},
+{
+"_id": 79,
+"parentId": 3,
+"name": "Груминг",
+"childrenCount": 5,
+"productCount": 0
+},
+{
+"_id": 85,
+"parentId": 3,
+"name": "Клетки для животных",
+"childrenCount": 0,
+"productCount": 40
+},
+{
+"_id": 88,
+"parentId": 3,
+"name": "Консервы для кошек",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 89,
+"parentId": 3,
+"name": "Лежанки, домики",
+"childrenCount": 5,
+"productCount": 0
+},
+{
+"_id": 93,
+"parentId": 3,
+"name": "Миски",
+"childrenCount": 8,
+"productCount": 0
+},
+{
+"_id": 104,
+"parentId": 3,
+"name": "Транспортировка и переноски",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 105,
+"parentId": 3,
+"name": "Тенты",
+"childrenCount": 0,
+"productCount": 13
+},
+{
+"_id": 114,
+"parentId": 3,
+"name": "Игровые комплексы",
+"childrenCount": 0,
+"productCount": 71
+},
+{
+"_id": 115,
+"parentId": 3,
+"name": "Игровые туннели",
+"childrenCount": 0,
+"productCount": 7
+},
+{
+"_id": 116,
+"parentId": 3,
+"name": "Игрушки",
+"childrenCount": 11,
+"productCount": 0
+},
+{
+"_id": 125,
+"parentId": 3,
+"name": "Когтеточки",
+"childrenCount": 4,
+"productCount": 0
+},
+{
+"_id": 130,
+"parentId": 3,
+"name": "Наполнители для кошачьих туалетов",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 134,
+"parentId": 3,
+"name": "Мясные лакомства",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 315,
+"parentId": 3,
+"name": "Мультивитаминные лакомства",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 172,
+"parentId": 2,
+"name": "Шлейки",
+"childrenCount": 0,
+"productCount": 4
+},
+{
+"_id": 8,
+"parentId": 1,
+"name": "Гигиена",
+"childrenCount": 14,
+"productCount": 0
+},
+{
+"_id": 13,
+"parentId": 1,
+"name": "Игрушки",
+"childrenCount": 20,
+"productCount": 0
+},
+{
+"_id": 27,
+"parentId": 1,
+"name": "Одежда и обувь",
+"childrenCount": 7,
+"productCount": 0
+},
+{
+"_id": 30,
+"parentId": 1,
+"name": "Консервы для собак",
+"childrenCount": 0,
+"productCount": 33
+},
+{
+"_id": 36,
+"parentId": 1,
+"name": "Лежанки, домики",
+"childrenCount": 5,
+"productCount": 0
+},
+{
+"_id": 39,
+"parentId": 1,
+"name": "Таблички",
+"childrenCount": 0,
+"productCount": 9
+},
+{
+"_id": 40,
+"parentId": 1,
+"name": "Будки, вольеры, тенты",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 44,
+"parentId": 1,
+"name": "Мясные лакомства",
+"childrenCount": 6,
+"productCount": 0
+},
+{
+"_id": 318,
+"parentId": 1,
+"name": "Лакомства FUN FOOD",
+"childrenCount": 0,
+"productCount": 6
+},
+{
+"_id": 310,
+"parentId": 1,
+"name": "Лакомства-игрушки",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 306,
+"parentId": 1,
+"name": "Натуральные лакомства",
+"childrenCount": 0,
+"productCount": 16
+},
+{
+"_id": 314,
+"parentId": 1,
+"name": "Мультивитаминные лакомства",
+"childrenCount": 0,
+"productCount": 3
+},
+{
+"_id": 228,
+"parentId": 1,
+"name": "Аксессуары для кормления",
+"childrenCount": 4,
+"productCount": 0
+},
+{
+"_id": 233,
+"parentId": 1,
+"name": "Аксессуары",
+"childrenCount": 3,
+"productCount": 0
+},
+{
+"_id": 246,
+"parentId": 1,
+"name": "Миски",
+"childrenCount": 8,
+"productCount": 0
+},
+{
+"_id": 258,
+"parentId": 1,
+"name": "Жевательные кости",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 261,
+"parentId": 1,
+"name": "Клетки для животных",
+"childrenCount": 0,
+"productCount": 35
+},
+{
+"_id": 262,
+"parentId": 1,
+"name": "Амуниция",
+"childrenCount": 9,
+"productCount": 0
+},
+{
+"_id": 272,
+"parentId": 1,
+"name": "Груминг",
+"childrenCount": 5,
+"productCount": 0
+},
+{
+"_id": 281,
+"parentId": 1,
+"name": "Транспортировка и переноски",
+"childrenCount": 2,
+"productCount": 0
+},
+{
+"_id": 1,
+"parentId": 0,
+"name": "Товары для собак",
+"childrenCount": 20,
+"productCount": 0
+},
+{
+"_id": 3,
+"parentId": 0,
+"name": "Товары для кошек",
+"childrenCount": 18,
+"productCount": 0
+},
+{
+"_id": 4,
+"parentId": 0,
+"name": "Товары для птиц",
+"childrenCount": 6,
+"productCount": 0
+},
+{
+"_id": 5,
+"parentId": 0,
+"name": "Товары для мелких животных",
+"childrenCount": 11,
+"productCount": 0
+},
+{
+"_id": 6,
+"parentId": 0,
+"name": "Аквариумистика",
+"childrenCount": 10,
+"productCount": 0
+},
+{
+"_id": 7,
+"parentId": 0,
+"name": "Террариумистика",
+"childrenCount": 11,
+"productCount": 0
+}
+]);
+
+// Run a find command to view items sold on April 4th, 2014.
+//db.sales.find({ date: { $gte: new Date('2014-04-04'), $lt: new Date('2014-04-05') } });
+
+// Build an aggregation to view total sales for each product in 2014.
+// const aggregation = [
+//   { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
+//   { $group: { id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
+// ];
+
+// Run the aggregation and open a cursor to the results.
+// Use toArray() to exhaust the cursor to return the whole result set.
+// You can use hasNext()/next() to iterate through the cursor page by page.
+// db.sales.aggregate(aggregation);
