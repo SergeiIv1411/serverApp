@@ -16,5 +16,13 @@
     "graphql": "^15.5.0",
     "mongoose": "^5.12.12",
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeiIv1411/serverApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SergeiIv1411/serverApp/issues"
+  },
+  "homepage": "https://github.com/SergeiIv1411/serverApp#readme"
 }
